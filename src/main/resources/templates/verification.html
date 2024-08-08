@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation of registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .confirmation-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Registration is successful!</h1>
+    <p>To complete the registration, please follow the link in the letter we sent to your email.</p>
+    <p>If you did not receive the email, please check your spam folder..</p>
+    <p>If problems persist, contact support.</p>
+    <a th:href="${url}" class="confirmation-link">Go to mail</a>
+
+    <p>Return to the <a th:href="${mainPage}" class="go-home-link">main page</a></p>
+
+</div>
+
+</body>
+</html>

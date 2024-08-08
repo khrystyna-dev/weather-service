@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Response (Short)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Weather Response (Short)</h2>
+<form action="#" method="post" th:action="@{/specializedFrom}" th:object="${weather}">
+<p><strong>City:</strong> <span th:text="${weather.city}"></span></p>
+<p><strong>Temperature:</strong> <span th:text="${weather.temp}"></span></p>
+    <button type="submit">More info</button>
+</form>
+</body>
+</html>

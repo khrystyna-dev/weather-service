@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Response</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Weather Response</h2>
+<form action="#" method="get" th:action="@{/weather}" >
+<table>
+    <tr>
+        <th>City</th>
+        <td th:text="${weather.city}"></td>
+    </tr>
+    <tr>
+        <th>Country</th>
+        <td th:text="${weather.country}"></td>
+    </tr>
+    <tr>
+        <th>Temperature</th>
+        <td th:text="${weather.temp}"></td>
+    </tr>
+    <tr>
+        <th>Latitude</th>
+        <td th:text="${weather.lat}"></td>
+    </tr>
+    <tr>
+        <th>Longitude</th>
+        <td th:text="${weather.lon}"></td>
+    </tr>
+    <tr>
+        <th>Feels Like</th>
+        <td th:text="${weather.feelsLike}"></td>
+    </tr>
+</table>
+
+
+    <button type="submit">Look for a new city</button>
+</form>
+
+</body>
+</html>

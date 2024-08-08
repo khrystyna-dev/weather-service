@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Confirmation Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<div style="background-color: #f4f4f4; padding: 20px; text-align: center;">
+    <h2 th:text="'Congratulations, ' + ${user.firstName} + ' ' + ${user.lastName} + '.'"></h2>
+    <p th:text="'In order to continue registration on the Weather site, you need to go to the following link:'"></p>
+    <a th:href="${verificationUrl}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: #fff; text-decoration: none;">
+        Verify Account
+    </a>
+</div>
+</body>
+</html>
